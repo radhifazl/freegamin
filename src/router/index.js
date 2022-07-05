@@ -8,12 +8,34 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/explore',
+    name: 'ExploreGames',
+    component: () => import('../views/Explore.vue')
+  },
+  {
+    path: '/pc-games',
+    name: 'DD',
+    component: () => import('@/views/PcGames.vue')
+  },
+  {
+    path: '/browser-games',
+    name: 'BrowserGames',
+    component: () => import('@/views/BrowserGames.vue')
+  },
+  {
+    path: '/game/:id/:name',
+    name: 'GameDetails',
+    component: () => import('@/views/GameDetails.vue')
+  },
+  {
+    path: '/category',
+    name: 'GameCategories',
+    component: () => import('@/views/GameCategories.vue')
+  },
+  {
+    path: '/games/category/:genre',
+    name: 'GamesGenre',
+    component: () => import('@/views/GamesGenre.vue')
   }
 ]
 
